@@ -1,1 +1,3 @@
-# reactis
+# Reactis
+
+React boilerplate
