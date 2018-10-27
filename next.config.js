@@ -13,26 +13,37 @@ module.exports = {
   },
 
   // Webpack
-  webpack: (config) => {
+  webpack: (config, { dev }) => {
+    // Resolve path
     config.resolve = {
       extensions: ['.js', '.jsx', '.scss', '.css'],
       alias: {
-        Components: path.resolve(__dirname, 'components/'),
-        Elements: path.resolve(__dirname, 'components/elements/'),
-        Utils: path.resolve(__dirname, 'components/utils/'),
-        Hocs: path.resolve(__dirname, 'hocs/'),
-        Actions: path.resolve(__dirname, 'redux/actions'),
-        Moduls: path.resolve(__dirname, 'redux/moduls'),
-        Types: path.resolve(__dirname, 'redux/types')
-      }
+        'reactis/components': path.resolve(__dirname, 'components/'),
+        'reactis/elements': path.resolve(__dirname, 'components/elements/'),
+        'reactis/utils': path.resolve(__dirname, 'components/utilities/'),
+        'reactis/layout': path.resolve(__dirname, 'components/pageLayouts/'),
+        'reactis/hocs': path.resolve(__dirname, 'hocs/'),
+        'reactis/actions': path.resolve(__dirname, 'redux/actions'),
+        'reactis/moduls': path.resolve(__dirname, 'redux/moduls'),
+        'reactis/types': path.resolve(__dirname, 'redux/types')
+      },
+    }
+    
+    config.node = {
+      fs: 'empty'
     }
     
     // Modules
-    config.module.rules.push({
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: "eslint-loader"
-    })
+    if (dev) {
+      config.module.rules.push({
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          quiet: true,
+        }
+      })
+    }
 
     return config
   },
