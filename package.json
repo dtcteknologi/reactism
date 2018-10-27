@@ -1,0 +1,37 @@
+{
+  "name": "reactis",
+  "version": "1.0.0",
+  "description": "React Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GifaEriyanto/reactis.git"
+  },
+  "keywords": [
+    "React",
+    "Nextjs",
+    "Redux"
+  ],
+  "author": "Docotel Teknologi Celebes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GifaEriyanto/reactis/issues"
+  },
+  "homepage": "https://github.com/GifaEriyanto/reactis#readme",
+  "dependencies": {
+    "emotion": "^9.2.12",
+    "next": "^7.0.2",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-loader": "^2.1.1"
+  }
+}
