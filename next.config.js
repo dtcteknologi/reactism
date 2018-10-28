@@ -25,14 +25,15 @@ module.exports = {
         'reactis/hocs': path.resolve(__dirname, 'hocs/'),
         'reactis/actions': path.resolve(__dirname, 'redux/actions'),
         'reactis/moduls': path.resolve(__dirname, 'redux/moduls'),
-        'reactis/types': path.resolve(__dirname, 'redux/types')
+        'reactis/types': path.resolve(__dirname, 'redux/types'),
+        'reactis/config': path.resolve(__dirname, 'config/')
       },
     }
     
     config.node = {
       fs: 'empty'
     }
-    
+
     // Modules
     if (dev) {
       config.module.rules.push({

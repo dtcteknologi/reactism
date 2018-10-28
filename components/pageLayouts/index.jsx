@@ -1,13 +1,10 @@
-import Head from "next/head"
+import Seo from "./partials/seo"
 
-const MainLayout = ({ title, children }) => {
+const MainLayout = ({ title, children, ...props }) => {
   return (
     <>
-      <Head>
-        <title>{ title || 'Reactis' }</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <section>
+      <Seo title={ title }/>
+      <section { ...props }>
         { children }
       </section>
     </>
