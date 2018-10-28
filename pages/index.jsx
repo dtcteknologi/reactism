@@ -1,6 +1,7 @@
-import MainLayout from "reactis/layout"
-import { Button } from "reactis/elements"
-import { css } from "emotion"
+import MainLayout from 'reactis/layout'
+import { Button } from 'reactis/elements'
+import { css } from 'emotion'
+import { Container, Row, Col } from 'react-grid-system';
 
 const Index = () => {
   const style = css`

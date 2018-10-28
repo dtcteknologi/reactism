@@ -1,4 +1,4 @@
-import Seo from "./partials/seo"
+import Seo from './partials/seo'
 
 const MainLayout = ({ title, children, ...props }) => {
   return (

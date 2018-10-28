@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { withRouter } from 'next/router'
-import Meta from "reactis/config/meta"
+import Meta from 'reactis/config/meta'
 
 const Seo = ({title, description, image, router}) => {
   return (
