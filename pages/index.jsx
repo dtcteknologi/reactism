@@ -1,7 +1,6 @@
 import MainLayout from 'reactis/layout'
 import { Button } from 'reactis/elements'
 import { css } from 'emotion'
-import { Container, Row, Col } from 'react-grid-system';
 
 const Index = () => {
   const style = css`
@@ -16,7 +15,7 @@ const Index = () => {
       margin-bottom: 0;
     }
     p {
-      opacity: .5;
+      color: #999;
       margin-top: 20px;
       margin-bottom: 30px;
     }
