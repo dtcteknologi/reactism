@@ -1,6 +1,6 @@
-const Badge = () => {
+const Badge = ({ ...props }) => {
   return (
-    <div>Badge</div>
+    <div { ...props }>Badge</div>
   )
 }
 

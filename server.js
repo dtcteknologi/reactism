@@ -5,7 +5,7 @@ const { parse } = require('url')
 const compression = require('compression')
 
 const dev = process.env.NODE_ENV !== 'production'
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 
 const app = next({dir: '.', dev })
 const handle = app.getRequestHandler()

@@ -33,8 +33,8 @@ class Index extends Component {
           <img src="/static/reactis_logo.png" alt="Reactis Logo"/>
           <h1>Welcome to <b>Reactis</b></h1>
           <p>Reactis is a React Boilerplate based next.js</p>
-          <Link href={{ pathname: '/about' }}>
-            <a><Button>Learn more</Button></a>
+          <Link href="/about">
+            <Button>Learn more</Button>
           </Link>
         </MainLayout>
       </>

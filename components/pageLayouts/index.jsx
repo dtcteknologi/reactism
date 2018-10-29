@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import Seo from './partials/seo'
-import { css } from 'emotion'
 
 class MainLayout extends Component {
   constructor (props) {
@@ -16,6 +15,8 @@ class MainLayout extends Component {
   }
   
   render () {
+    const { loading } = this.state
+
     const splashscreen = {
       width: '100%',
       height: '100vh',
@@ -25,18 +26,17 @@ class MainLayout extends Component {
       backgroundColor: '#fff',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      zIndex: 2,
+      visibility: `${ loading ? 'visible' : 'hidden' }`,
+      opacity: `${ loading ? 1 : 0 }`,
+      transition: `${ loading ? 'opacity .1s linear' : 'visibility 0s .1s, opacity .1s linear' }`
     }
     
     return (
       <>
         <Seo title={ this.props.title }/>
-        {
-          this.state.loading ?
-            <div style={ splashscreen }><img src="/static/reactis_logo.png" alt="Reactis Logo" width="100px"/></div>
-            :
-            null
-        }
+        <div style={ splashscreen }><img src="/static/reactis_logo.png" alt="Reactis Logo" width="100px"/></div>
         <section { ...this.props }>
           { this.props.children }
         </section>

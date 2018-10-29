@@ -2,6 +2,7 @@ import { Component } from 'react'
 import MainLayout from 'reactis/layout'
 import { Button } from 'reactis/elements'
 import { css } from 'emotion'
+import Link from 'next/link'
 
 class Index extends Component {
   render () {
@@ -32,7 +33,9 @@ class Index extends Component {
           <img src="/static/reactis_logo.png" alt="Reactis Logo"/>
           <h1>About <b>Reactis</b></h1>
           <p>Reactis is a React Boilerplate based next.js</p>
-          <Button>Learn more</Button>
+          <Link href="/">
+            <Button>Back to home</Button>
+          </Link>
         </MainLayout>
       </>
     )

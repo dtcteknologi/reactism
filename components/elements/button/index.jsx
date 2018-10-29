@@ -1,8 +1,9 @@
 import { css } from 'emotion'
+import { Color } from 'reactis/utils'
 
-const Button = ({ children }) => {
+const Button = ({ children, ...props }) => {
   const style = css`
-    background-color: #3498db;
+    background-color: ${ Color.primary };
     color: #fff;
     border: 1px solid rgba(0,0,0,.1);
     padding: 10px 15px;
@@ -13,7 +14,7 @@ const Button = ({ children }) => {
   `
 
   return (
-    <button className={ style }>{ children }</button>
+    <button className={ style } { ...props }>{ children }</button>
   )
 }
 
