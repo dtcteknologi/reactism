@@ -8,6 +8,10 @@ export default class MyDocument extends Document {
     return { html, head, errorHtml, chunks, styles }
   }
 
+  componentDidMount () {
+    
+  }
+
   render() {
     return (
       <html lang="en">

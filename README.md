@@ -1,3 +1,3 @@
 # Reactis
 
-React boilerplate
+Reactis is a React Boilerplate based next.js
