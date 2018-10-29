@@ -8,6 +8,7 @@ const Meta = {
   author: 'Reactis',
   favicon: '/static/reactis_favicon.png',
   url: 'https://reactis.io',
+  theme_color: '#17c0eb',
   facebook: {
     app_id: '',
     page_id: ''

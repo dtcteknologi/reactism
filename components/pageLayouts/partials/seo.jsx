@@ -67,6 +67,8 @@ const Seo = ({title, description, image, router}) => {
       <meta name="author" content={ Meta.author } />
       <link rel="canonical" href={ `${ Meta.url }${ router.asPath }` } />
       <link rel="shortcut icon" href={ Meta.favicon } type="image/x-icon"/>
+      <link rel="manifest" href="/static/manifest.json" />
+      <meta name="theme-color" content={ Meta.theme_color }/>
     </Head>
   )
 }

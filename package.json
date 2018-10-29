@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "export": "next export"
   },
   "repository": {
@@ -25,12 +25,15 @@
   },
   "homepage": "https://github.com/GifaEriyanto/reactis#readme",
   "dependencies": {
+    "compression": "^1.7.3",
     "emotion": "^9.2.12",
+    "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
     "react-grid-system": "^4.3.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "sw-precache-webpack-plugin": "^0.11.5"
   },
   "devDependencies": {
     "eslint": "^5.8.0",

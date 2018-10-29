@@ -1,16 +1,13 @@
-// Get routes data
-const routes = require('./routes').web
-// Using Path
 const path = require('path')
+const getRoutes = require('./config/routes')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
   // Disallow pages as route
   useFileSystemPublicRoutes: false,
 
   // Define routes
-  exportPathMap: async function () {
-    return routes
-  },
+  exportPathMap: getRoutes,
 
   // Webpack
   webpack: (config, { dev }) => {
@@ -45,6 +42,19 @@ module.exports = {
         }
       })
     }
+
+    config.plugins.push(
+      new SWPrecacheWebpackPlugin({
+        verbose: true,
+        staticFileGlobsIgnorePatterns: [/\.next\//],
+        runtimeCaching: [
+          {
+            handler: 'networkFirst',
+            urlPattern: /^https?.*/
+          }
+        ]
+      })
+    )
 
     return config
   },

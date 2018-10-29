@@ -46,7 +46,7 @@ export default class Error extends React.Component {
           </h1>
           :
           <h1>
-            <div>Oops</div>
+            <div>{ this.props.statusCode }</div>
             <span>Something wrong!</span>
           </h1>
         }
