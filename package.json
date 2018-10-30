@@ -27,6 +27,7 @@
   "dependencies": {
     "compression": "^1.7.3",
     "emotion": "^9.2.12",
+    "emotion-server": "^9.2.12",
     "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.7.0-alpha.0",
@@ -34,6 +35,8 @@
     "sw-precache-webpack-plugin": "^0.11.5"
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^9.2.11",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "nodemon": "^1.18.5"
   }
 }

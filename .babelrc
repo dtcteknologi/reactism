@@ -1,0 +1,21 @@
+{
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  },
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "emotion",
+      {
+        "sourceMap": true,
+        "autoLabel": false,
+        "labelFormat": "[local]",
+        "cssPropOptimization": true
+      }
+    ]
+  ]
+}
