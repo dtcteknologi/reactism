@@ -47,7 +47,7 @@ const Seo = ({title, description, image, router}) => {
             <meta name="twitter:image:src" content={ Meta.image } />
           </>
       }
-      
+
       <meta property="og:type" content="website" />
       <meta property="og:url" content={ `${ Meta.url }${ router.asPath }` }/>
       <meta property="og:locale" content={ Meta.locale } />

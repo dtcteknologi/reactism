@@ -16,7 +16,7 @@ const getRoutes = require('./config/routes')
 const routes = getRoutes()
 app.prepare().then(() => {
   const server = express()
-  
+
   server.use(compression())
   server.get('/service-worker.js', (req, res) => {
     app.serveStatic(req, res, path.join(__dirname, '.next', req.url))

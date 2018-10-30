@@ -26,7 +26,7 @@ class Index extends Component {
         width: 100px;
       }
     `
-  
+
     return (
       <>
         <MainLayout className={ style }>

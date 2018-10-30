@@ -7,7 +7,7 @@ const MainLayout = ({ ...props }) => {
   useEffect(() => {
     setLoading(false)
   })
-  
+
   const splashscreen = {
     width: '100%',
     height: '100vh',
@@ -23,7 +23,7 @@ const MainLayout = ({ ...props }) => {
     opacity: `${ loading ? 1 : 0 }`,
     transition: `${ loading ? 'opacity .1s linear' : 'visibility 0s .1s, opacity .1s linear' }`
   }
-  
+
   return (
     <>
       <Seo title={ props.title }/>
