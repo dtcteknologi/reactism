@@ -1,0 +1,26 @@
+{
+  "name": "Reactis",
+  "short_name": "Reactis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#17c0eb",
+  "description": "Reactis is a React Boilerplate based next.js",
+  "icons": [
+    {
+      "src": "/static/reactis_logo_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/reactis_logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/reactis_favicon.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    }
+  ]
+}
