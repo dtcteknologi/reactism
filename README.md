@@ -1,3 +1,3 @@
-# Reactis
+# Reactism
 
-Reactis is a React Boilerplate based next.js
+Reactism is a React Boilerplate based next.js
