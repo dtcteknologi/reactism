@@ -7,7 +7,9 @@
     "dev": "nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "export": "next export"
+    "export": "next export",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
     "Nextjs",
     "Redux"
   ],
-  "author": "Docotel Teknologi Celebes",
+  "author": "PT. Docotel Teknologi Celebes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GifaEriyanto/reactis/issues"
@@ -37,6 +39,8 @@
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "docz": "^0.12.7",
+    "docz-theme-bone": "^0.11.3",
     "nodemon": "^1.18.5"
   }
 }

@@ -2,6 +2,18 @@ const path = require('path')
 const getRoutes = require('./config/routes')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
+const aliases = {
+  'reactis/components': path.resolve(__dirname, 'components/'),
+  'reactis/elements': path.resolve(__dirname, 'components/elements/'),
+  'reactis/utils': path.resolve(__dirname, 'components/utilities/'),
+  'reactis/layout': path.resolve(__dirname, 'components/pageLayouts/'),
+  'reactis/hocs': path.resolve(__dirname, 'hocs/'),
+  'reactis/actions': path.resolve(__dirname, 'redux/actions'),
+  'reactis/moduls': path.resolve(__dirname, 'redux/moduls'),
+  'reactis/types': path.resolve(__dirname, 'redux/types'),
+  'reactis/config': path.resolve(__dirname, 'config/')
+}
+
 module.exports = {
   // Disallow pages as route
   useFileSystemPublicRoutes: false,
@@ -9,24 +21,17 @@ module.exports = {
   // Define routes
   exportPathMap: getRoutes,
 
+  // Alias
+  alias: aliases,
+
   // Webpack
   webpack: (config, { dev }) => {
     // Resolve path
     config.resolve = {
-      extensions: ['.js', '.jsx', '.scss', '.css'],
-      alias: {
-        'reactis/components': path.resolve(__dirname, 'components/'),
-        'reactis/elements': path.resolve(__dirname, 'components/elements/'),
-        'reactis/utils': path.resolve(__dirname, 'components/utilities/'),
-        'reactis/layout': path.resolve(__dirname, 'components/pageLayouts/'),
-        'reactis/hocs': path.resolve(__dirname, 'hocs/'),
-        'reactis/actions': path.resolve(__dirname, 'redux/actions'),
-        'reactis/moduls': path.resolve(__dirname, 'redux/moduls'),
-        'reactis/types': path.resolve(__dirname, 'redux/types'),
-        'reactis/config': path.resolve(__dirname, 'config/')
-      },
+      extensions: ['.js', '.jsx', '.scss', '.css', '.mdx'],
+      alias: aliases,
     }
-    
+
     config.node = {
       fs: 'empty'
     }
