@@ -1,11 +1,21 @@
 ---
 name: Button
+menu: Components
 ---
 
+import { PropsTable, Playground } from 'docz'
 import Button from './'
 
-# Hello world
+# Button
 
-Hello, I'm still a mdx file, but now I have a button component!
+This is sample button components, you can costumized this or create more component.
 
-<Button>Click</Button>
+<PropsTable of={ Button } />
+
+<Playground>
+  <Button>Click</Button>
+  <Button color="primary">Click</Button>
+  <Button color="success">Click</Button>
+  <Button color="warning">Click</Button>
+  <Button color="danger">Click</Button>
+</Playground>

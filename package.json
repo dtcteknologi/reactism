@@ -16,8 +16,9 @@
     "url": "git+https://github.com/dtcoss/reactism.git"
   },
   "keywords": [
-    "React",
-    "Nextjs"
+    "react",
+    "boilerplate",
+    "nextjs"
   ],
   "author": "PT. Docotel Teknologi Celebes",
   "license": "ISC",
