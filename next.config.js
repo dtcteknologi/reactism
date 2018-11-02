@@ -3,15 +3,15 @@ const getRoutes = require('./config/routes')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 const aliases = {
-  'reactis/components': path.resolve(__dirname, 'components/'),
-  'reactis/elements': path.resolve(__dirname, 'components/elements/'),
-  'reactis/utils': path.resolve(__dirname, 'components/utilities/'),
-  'reactis/layout': path.resolve(__dirname, 'components/pageLayouts/'),
-  'reactis/hocs': path.resolve(__dirname, 'hocs/'),
-  'reactis/actions': path.resolve(__dirname, 'redux/actions'),
-  'reactis/moduls': path.resolve(__dirname, 'redux/moduls'),
-  'reactis/types': path.resolve(__dirname, 'redux/types'),
-  'reactis/config': path.resolve(__dirname, 'config/')
+  'reactism/components': path.resolve(__dirname, 'components/'),
+  'reactism/elements': path.resolve(__dirname, 'components/elements/'),
+  'reactism/utils': path.resolve(__dirname, 'components/utilities/'),
+  'reactism/layout': path.resolve(__dirname, 'components/pageLayouts/'),
+  'reactism/hocs': path.resolve(__dirname, 'hocs/'),
+  'reactism/actions': path.resolve(__dirname, 'redux/actions'),
+  'reactism/moduls': path.resolve(__dirname, 'redux/moduls'),
+  'reactism/types': path.resolve(__dirname, 'redux/types'),
+  'reactism/config': path.resolve(__dirname, 'config/')
 }
 
 module.exports = {

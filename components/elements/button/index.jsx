@@ -1,5 +1,5 @@
 import { css } from 'emotion'
-import { Background } from 'reactis/utils'
+import { Background } from 'reactism/utils'
 
 const Button = ({ children, color, ...props }) => {
   const style = css`

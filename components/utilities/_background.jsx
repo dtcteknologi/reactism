@@ -1,5 +1,5 @@
 import { css } from 'emotion'
-import { Color } from 'reactis/utils'
+import { Color } from 'reactism/utils'
 
 const Background = (theme) => {
 	switch (theme) {

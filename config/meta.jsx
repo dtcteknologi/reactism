@@ -1,21 +1,21 @@
 const Meta = {
-  site_name: 'Reactis',
-  title: 'Reactis | React Boilderplate based nextjs',
+  site_name: 'Reactism',
+  title: 'Reactism | React Boilderplate based nextjs',
   description: 'React boiler plate base on next.js',
-  image: '/static/reactis_cover.jpg',
+  image: '/static/reactism_cover.jpg',
   language: 'English',
   locale: 'en_EN',
-  author: 'Reactis',
-  favicon: '/static/reactis_favicon.png',
-  url: 'https://reactis.io',
+  author: 'Reactism',
+  favicon: '/static/reactism_favicon.png',
+  url: 'https://reactism.io',
   theme_color: '#17c0eb',
   facebook: {
     app_id: '',
     page_id: ''
   },
   twitter: {
-    site: '@reactis',
-    creator: '@reactis',
+    site: '@reactism',
+    creator: '@reactism',
     cardType: 'summary_large_image',
   }
 }

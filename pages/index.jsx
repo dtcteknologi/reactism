@@ -1,6 +1,6 @@
 import { Component } from 'react'
-import MainLayout from 'reactis/layout'
-import { Button } from 'reactis/elements'
+import MainLayout from 'reactism/layout'
+import { Button } from 'reactism/elements'
 import { css } from 'emotion'
 import Link from 'next/link'
 
@@ -30,9 +30,9 @@ class Index extends Component {
     return (
       <>
         <MainLayout className={ style }>
-          <img src="/static/reactis_logo.png" alt="Reactis Logo"/>
-          <h1>Welcome to <b>Reactis</b></h1>
-          <p>Reactis is a React Boilerplate based next.js</p>
+          <img src="/static/reactism_logo.png" alt="Reactism Logo"/>
+          <h1>Welcome to <b>Reactism</b></h1>
+          <p>Reactism is a React Boilerplate based next.js</p>
           <Link href="/about">
             <Button>Learn more</Button>
           </Link>
