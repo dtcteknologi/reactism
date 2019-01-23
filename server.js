@@ -1,40 +1,32 @@
 const express = require('express')
 const next = require('next')
 const path = require('path')
-const { parse } = require('url')
 const compression = require('compression')
 
 const dev = process.env.NODE_ENV !== 'production'
-const PORT = process.env.NODE_ENV === 'production' ? 9999 : 3000
+const PORT = process.env.NODE_ENV === 'production' ? 80 : 3000
 
-const app = next({dir: '.', dev })
-const handle = app.getRequestHandler()
+const app = next({ dir: '.', dev })
 
-// Routes
-const getRoutes = require('./config/routes')
+// routing
+const routes = require('./config/routes')
+const handler = routes.getRequestHandler(app)
 
-const routes = getRoutes()
 app.prepare().then(() => {
   const server = express()
+  server.use(handler)
 
-  server.use(compression())
-  server.get('/service-worker.js', (req, res) => {
-    app.serveStatic(req, res, path.join(__dirname, '.next', req.url))
-  })
+  // Service worker
+  if (process.env.NODE_ENV === 'production') {
+    server.get('/service-worker.js', (req, res) => {
+      app.serveStatic(req, res, path.join(__dirname, '.next', req.url))
+    })
+  }
+
   server.use(express.static(__dirname, { dotfiles: 'allow' }))
-
-  server.get('*', (req, res) => {
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query = {} } = parsedUrl
-    const route = routes[pathname]
-    if (route) {
-      return app.render(req, res, route.page, query)
-    }
-    return handle(req, res)
-  })
-
+  server.use(compression())
   server.listen(PORT, (err) => {
     if (err) throw err
-    console.log(`> Ready on http://localhost:${PORT}`)
+    console.log(`> Ready on http://localhost:${ PORT }`)
   })
 })

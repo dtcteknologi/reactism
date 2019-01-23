@@ -1,6 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
 import { withRouter } from 'next/router'
-import Meta from 'reactism/config/meta'
+import Meta from 'Config/meta'
+import PropTypes from 'prop-types'
 
 const Seo = ({title, description, image, router}) => {
   return (
@@ -71,6 +73,13 @@ const Seo = ({title, description, image, router}) => {
       <meta name="theme-color" content={ Meta.theme_color }/>
     </Head>
   )
+}
+
+Seo.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  router: PropTypes.object
 }
 
 export default withRouter(Seo)

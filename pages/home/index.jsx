@@ -1,0 +1,43 @@
+import React from 'react'
+import MainLayout from 'Layout'
+import { Button } from 'Elements'
+import { css } from 'emotion'
+import Link from 'next/link'
+
+const Index = () => {
+  const style = css`
+    @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i');
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    margin-top: 47vh;
+    transform: translateY(-50%);
+    h1 {
+      font-weight: normal;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    p {
+      color: #666;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 100px;
+    }
+  `
+
+  return (
+    <>
+      <MainLayout className={ style }>
+        <img src="/static/reactism_logo.png" alt="Reactism Logo"/>
+        <h1>Welcome to <b>Reactism</b></h1>
+        <p>Reactism is a React Boilerplate based next.js</p>
+        <Link href="/about">
+          <Button>Learn more</Button>
+        </Link>
+      </MainLayout>
+    </>
+  )
+}
+
+export default Index

@@ -1,6 +1,7 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 import { cx, css } from 'emotion'
-import { Background } from 'reactism/utils'
+import { Background } from 'Utils'
 
 const Button = ({ children, transparent, color, style, ...props }) => {
   const baseStyle = css`
@@ -34,11 +35,17 @@ const Button = ({ children, transparent, color, style, ...props }) => {
 }
 
 Button.propTypes = {
-  color: PropTypes.string
+  color: PropTypes.string,
+  children: PropTypes.node,
+  transparent: PropTypes.bool,
+  style: PropTypes.string
 }
 
 Button.defaultProps = {
-  color: null
+  color: null,
+  children: null,
+  transparent: false,
+  style: null
 }
 
 export default Button

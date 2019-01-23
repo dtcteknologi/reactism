@@ -1,4 +1,6 @@
+import React from 'react'
 import Seo from './partials/seo'
+import PropTypes from 'prop-types'
 
 const MainLayout = ({ ...props }) => {
   return (
@@ -9,6 +11,11 @@ const MainLayout = ({ ...props }) => {
       </section>
     </>
   )
+}
+
+MainLayout.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default MainLayout
