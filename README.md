@@ -12,7 +12,6 @@ And Done! You can start your project now, in the folder please run **npm install
 
  - **npm run dev** to see project in *dev mode*
  - **npm run build** for build project and then run **npm start** to see project in *production mode*
- - **npm run export** for make static file from your project
  - **npm run docz:dev** for see documentation
  - **npm run docz:build** to boild docz documentation
 
