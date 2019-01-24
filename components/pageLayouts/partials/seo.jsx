@@ -14,7 +14,7 @@ const Seo = ({title, description, image, router}) => {
             <meta key="twitter:title" name="twitter:title" content={ title } />
             <meta property="og:title" content={ title } />
           </>
-        :
+          :
           <>
             <title key="title">{ Meta.title }</title>
             <meta key="twitter:title" name="twitter:title" content={ Meta.title } />
@@ -29,7 +29,7 @@ const Seo = ({title, description, image, router}) => {
             <meta key="twitter:description" name="twitter:description" content={ description } />
             <meta property="og:description" content={ description } />
           </>
-        :
+          :
           <>
             <meta key="description" name="description" content={ Meta.description } />
             <meta key="twitter:description" name="twitter:description" content={ Meta.description } />
@@ -43,7 +43,7 @@ const Seo = ({title, description, image, router}) => {
             <meta property="og:image" content={ image } />
             <meta name="twitter:image:src" content={ image } />
           </>
-        :
+          :
           <>
             <meta property="og:image" content={ Meta.image } />
             <meta name="twitter:image:src" content={ Meta.image } />

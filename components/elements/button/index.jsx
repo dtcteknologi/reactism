@@ -17,16 +17,15 @@ const Button = ({ children, transparent, color, style, ...props }) => {
     &:last-child {
       margin-right: 0;
     }
-    ${ !transparent ?
-      `&:hover {
-        box-shadow: 0 5px 30px rgba(0,0,0,.1);
-      }
-      &:active {
-        transform: scale(.98);
-        box-shadow: 0 0 0 rgba(0,0,0,.1);
-      }`
-      : null
-    }
+    ${ !transparent ? `
+        &:hover {
+          box-shadow: 0 5px 30px rgba(0,0,0,.1);
+        }
+        &:active {
+          transform: scale(.98);
+          box-shadow: 0 0 0 rgba(0,0,0,.1);
+        }
+        ` : null }
   `
 
   return (
