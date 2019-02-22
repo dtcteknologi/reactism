@@ -48,3 +48,4 @@ const Background = (theme) => {
 }
 
 export default Background
+
